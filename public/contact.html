@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Devi Studio</title>
+
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Parisienne|Rokkitt&display=swap');
+        
+        body {
+            margin-top: 12vh;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 60px;
+            font-family: 'Parisienne';
+        }
+
+        @media (max-width: 750px) {body {margin-top: 18vh}}
+
+        #contact {
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-evenly;    
+            margin: 40px auto;
+        }
+
+        #contact #details {
+            width: 40%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: top;
+        }
+        
+        #contact #details h2 {
+            margin: 0px 0px 60px 0px;
+            text-align: center;
+            font-size: 37px;
+            font-family: 'Parisienne';
+        }
+
+        #contact #details div {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin: 15px 0px;
+        }
+
+        #contact #details img {
+            width: 50px;
+            height: 50px;
+            margin: 0px 25px;
+        }
+
+        #contact #details p {
+            vertical-align: middle;
+            font-size: 20px;
+            font-family: 'Rokkitt';
+        }
+
+        #contact iframe {
+            width: 40%;
+            height: 500px;
+        }
+
+        @media (max-width: 800px) {
+            #contact {
+                flex-direction: column;
+                align-items: center;
+            }
+            #contact #details, #contact iframe {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 500px) {
+            #contact #details, #contact iframe {
+                width: 100%;
+            }
+
+            #contact #details img {
+                margin: 0px 10px;
+                height: 40px;
+                width: 40px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header></header>
+    <h1>Contact Us</h1>
+
+    <div id="contact">
+        <div id="details">
+            <h2>Get in touch...</h2>
+            <div><img src="./images/static/icons/location.jpg" alt=""><p>#46/2, narashimha tower, 4th cross Rd, Sampige Rd, Near lalitha jewels, Malleshwaram, Bengaluru, Karnataka 560003</p></div>
+            <div><img src="./images/static/icons/call.jpg" alt=""><p>+91 9845030224</p></div>
+            <div><img src="./images/static/icons/email.jpg" alt=""><p><a href="mailto:devistudio1980@gmail.com">devistudio1980@gmail.com</a></p></div>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6165090280974!2d77.57017851488546!3d12.99636239083962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162e4fd6d74d%3A0xd419602e1471b826!2sDevi%20Studio!5e0!3m2!1sen!2sin!4v1586344734828!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+
+    <footer></footer>
+
+    <script src="./scripts/contact.js" type="module"></script>
+</body>
+</html>

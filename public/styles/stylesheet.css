@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+
+    font-family: 'Montserrat';
+}
+
+
+
+
+
+
+
+header {
+    position: fixed;
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+    color: purple;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0px 4px 15px #dddddd;
+    font-size: 15px;
+}
+
+header a {
+    transition: 0.3s;
+}
+
+header a:hover {
+    margin-top: -0.5em;
+}
+
+@media (max-width: 900px) {
+    header {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 750px) {
+    cover {
+        height: 87vh;
+        margin-top: 12vh;
+    }
+}
+
+
+cover {
+    display: block;
+    height: 93vh;
+    width: 100%;
+    margin-top: 7vh;
+}
+
+
+
+
+
+
+footer {
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0px -4px 15px #cccccc;
+    padding: 20px 0px;
+    margin: 100px 0px 0px 0px;
+    font-family: 'Montserrat';
+}
+
+footer>div{
+    max-width: 1000px;
+    margin: 0px auto;
+    padding: 0px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+footer>div>div {
+    width: 50%;
+    padding: 20px;
+}
+
+footer>div>:nth-child(1) {
+    border-right: 0.5px solid #aaaaaa;
+}
+
+footer h2 {
+    font-size: 20px;
+}
+
+footer p {
+    font-size: 17px;
+}
+
+footer h3 {
+    font-size: 17px;
+}
+
+footer a#contact-button {
+    display: block;
+    width: 130px;
+    margin: 30px auto 0px auto;
+    padding: 15px;
+    background-color: #a066a0;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+footer a#contact-button:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 750px) {
+    footer a#contact-button {
+        padding: 15px 0px;
+        font-size: 12px;
+    }
+
+    footer>div {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    footer>div>div {
+        width: 85%;
+    }
+
+    footer>div>:nth-child(1) {
+        border-right: none;
+        border-top: 0.5px solid #aaaaaa;
+    }
+}
+
+@media (max-width: 800px) {
+    footer h2 {
+        font-size: 17px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    footer h3 {
+        font-size: 12px;
+    }
+}
