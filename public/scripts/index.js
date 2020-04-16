@@ -6,11 +6,13 @@ import Header from './script.js';
 import Footer from './components/footer.js';
 import manifest from '../manifest.js';
 
-function handleResize() {
+var snapshots = [].concat(_toConsumableArray(manifest.snapshots.slice(0, parseInt(manifest.snapshots.length / 2))));
 
-    var rowHeight = void 0,
-        columns = void 0,
-        mobile = void 0;
+var rowHeight = void 0,
+    columns = void 0,
+    mobile = void 0;
+
+function handleResize() {
 
     if (window.innerWidth > 900) {
         rowHeight = 200;
@@ -31,7 +33,7 @@ function handleResize() {
     }
 
     ReactDOM.render(React.createElement(BasicGrid, {
-        images: [].concat(_toConsumableArray(manifest.snapshots)),
+        images: [].concat(_toConsumableArray(snapshots)),
         columns: columns,
         gap: 10,
         height: rowHeight,
@@ -40,6 +42,7 @@ function handleResize() {
     }), document.getElementsByTagName('basic-grid')[0]);
 
     Header(mobile);
+    document.getElementById("showMoreButton").onclick = showMore;
 }
 
 document.body.onresize = handleResize;
@@ -52,3 +55,35 @@ ReactDOM.render(React.createElement(Cover, {
 }), document.getElementsByTagName('cover')[0]);
 
 ReactDOM.render(React.createElement(Footer, null), document.getElementsByTagName('footer')[0]);
+
+function showMore() {
+    snapshots = [].concat(_toConsumableArray(manifest.snapshots));
+
+    ReactDOM.render(React.createElement(BasicGrid, {
+        images: [].concat(_toConsumableArray(snapshots)),
+        columns: columns,
+        gap: 10,
+        height: rowHeight,
+        openable: true,
+        openTime: 500
+    }), document.getElementsByTagName('basic-grid')[0]);
+
+    document.getElementById("showMoreButton").innerHTML = "VIEW LESS";
+    document.getElementById("showMoreButton").onclick = showLess;
+}
+
+function showLess() {
+    snapshots = [].concat(_toConsumableArray(manifest.snapshots.slice(0, parseInt(manifest.snapshots.length / 2))));
+
+    ReactDOM.render(React.createElement(BasicGrid, {
+        images: [].concat(_toConsumableArray(snapshots)),
+        columns: columns,
+        gap: 10,
+        height: rowHeight,
+        openable: true,
+        openTime: 500
+    }), document.getElementsByTagName('basic-grid')[0]);
+
+    document.getElementById("showMoreButton").innerHTML = "VIEW MORE";
+    document.getElementById("showMoreButton").onclick = showMore;
+}

@@ -27,40 +27,25 @@ var Work = function (_React$Component) {
         });
 
         _this.albums = [];
-        var _iteratorNormalCompletion = true;
-        var _didIteratorError = false;
-        var _iteratorError = undefined;
 
-        try {
-            for (var _iterator = _this.props.manifest[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                var i = _step.value;
+        var _loop = function _loop(no) {
+            var i = _this.props.manifest[no];
+            if (i.videos) {
+                _this.albums.push(i);
+            } else {
+                var thisCategory = i.albums.map(function (e, i) {
+                    return {
+                        title: e.album,
+                        cover: e.files[0],
+                        link: "./event?category=" + no + "&album=" + i
+                    };
+                });
+                _this.albums.push(thisCategory);
+            }
+        };
 
-                if (i.videos) {
-                    _this.albums.push(i);
-                } else {
-                    var thisCategory = i.albums.map(function (e, i) {
-                        return {
-                            title: e.album,
-                            cover: e.files[0],
-                            link: "./event?category=" + _this.state.now + "&album=" + i
-                        };
-                    });
-                    _this.albums.push(thisCategory);
-                }
-            }
-        } catch (err) {
-            _didIteratorError = true;
-            _iteratorError = err;
-        } finally {
-            try {
-                if (!_iteratorNormalCompletion && _iterator.return) {
-                    _iterator.return();
-                }
-            } finally {
-                if (_didIteratorError) {
-                    throw _iteratorError;
-                }
-            }
+        for (var no in _this.props.manifest) {
+            _loop(no);
         }
 
         _this.handleClick = _this.handleClick.bind(_this);
@@ -80,7 +65,8 @@ var Work = function (_React$Component) {
                 }) : React.createElement(AlbumCovers, {
                     albums: [].concat(_toConsumableArray(e)),
                     hidden: i == _this2.state.now ? false : true,
-                    key: i.toString()
+                    key: i.toString(),
+                    height: _this2.props.height
                 });
             });
             return React.createElement(

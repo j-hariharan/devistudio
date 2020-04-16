@@ -16,6 +16,7 @@ work div #work-nav span {
     margin: 20px 5px 0px 5px; 
     cursor: pointer;
     border-bottom: 0.5px solid #cccccc;
+    border-radius: 5px 5px 0px 0px;
 }
 
 work div #work-nav span:hover {
@@ -23,35 +24,90 @@ work div #work-nav span:hover {
 }
 
 work div #work-nav span#work-nav-active {
-    color: rgb(115, 54, 212);
-    border-bottom: 2px solid  rgb(115, 54, 212);
+    color: white;
+    border-bottom: 2px solid  rgb(13,27,218);
     font-weight: 600;
+    background-color: rgb(13, 27, 218)
+}
+
+work div #work-nav span#work-nav-active:hover {
+    opacity: 1;
+}
+
+@media (max-width: 400px) {
+    work div #work-nav {font-size: 15px;}
+}
+
+@media (max-width: 350px) {
+    work div #work-nav span {padding: 10px 5px}
+}
+
+@media (max-width: 300px) {
+    work div #work-nav {font-size: 13px;}
+    work div #work-nav span {padding: 10px 0px}
 }
 
 work div #work-albums-container {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0px auto;
     padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 work div #work-albums-container div {
-    height: 300px;
+    height: 200px;
+    width: 350px;
+    margin: 20px;
 }
 
 work div #work-albums-container h1 {
     font-size: 35px;
 }
 
+@media (max-width: 500px) {
+    work div #work-albums-container div {height: 250px}
+    work div #work-albums-container div h1 {font-size: 30px}
+}
+
+@media (max-width: 450px) {
+    work div #work-albums-container div {height: 200px}
+    work div #work-albums-container div h1 {font-size: 25px}
+}
+
+@media (max-width: 350px) {
+    work div #work-albums-container div {height: 150px}
+    work div #work-albums-container div h1 {font-size: 23px}
+}
+
 
 
 work div .videos {
     padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 10px auto;
 }
 
 work div .videos iframe {
-    display: block;
-    margin: 50px auto;
+    display: inline-block;
+    margin: 50px 20px;
     border-radius: 10px;
-    width: 560px;
-    height: 315px;
+    width: 375px;
+    height: 209px;
+    background-color: #dddddd;
+}
+
+@media (max-width: 700px) {
+    work div .videos iframe {width: 420px; height: 240px}
+}
+
+@media (max-width: 500px) {
+    work div .videos iframe {width: 280px; height: 157px}
 }

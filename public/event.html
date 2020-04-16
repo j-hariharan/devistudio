@@ -10,11 +10,37 @@
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 
-    <style></style>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Kanit|Parisienne&display=swap');
+
+        body {
+            margin: 12vh 0px 0px 0px;
+        }
+
+        @media (max-width: 750px) {
+            body{margin: 18vh 0px 0px 0px}
+        }
+
+        basic-grid {
+            display: block;
+            max-width: 1000px;
+            margin: 10px auto;
+            padding: 0px;
+        }
+
+        heading {
+            text-align: center;
+            font-family: 'Parisienne';
+            font-size: 25px;
+        }
+
+    </style>
 </head>
 <body>
     <header></header>
+    <heading></heading>
     <basic-grid></basic-grid>
+    <footer></footer>
 
 
     <script src="./scripts/event.js" type="module"></script>

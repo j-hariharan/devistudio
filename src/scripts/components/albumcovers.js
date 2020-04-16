@@ -23,14 +23,11 @@ export default class AlbumCovers extends React.Component {
                 backgroundImage: `url(${e.cover})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                width: "100%",
                 margin: "10px",
                 borderRadius: "10px",
-                cursor: "pointer",
-                margin: "20px 0px"
+                cursor: "pointer"
             }} key = {i.toString()} className = {this.props.hidden ? "" : "animated zoomIn"}>
                 <a href = {e.link} style = {{
-                    display: "block",
                     backgroundColor: "black",
                     opacity: "0.7",
                     height: "100%",
@@ -63,7 +60,7 @@ export default class AlbumCovers extends React.Component {
             <div style = {{
                 height: "100%",
                 width: "100%",
-                display: this.props.hidden ? "none" : "block"
+                display: this.props.hidden ? "none" : ""
             }} id = "work-albums-container">
                 {tiles}
             </div>

@@ -1,3 +1,3 @@
-node_modules
-others
-test.py
+node_modules/
+others/
+convert.py

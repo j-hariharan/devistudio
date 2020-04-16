@@ -11,7 +11,8 @@ export default class Work extends React.Component {
         this.categories = this.props.manifest.map(e => e.category)
         
         this.albums = []
-        for (let i of this.props.manifest) {
+        for (let no in this.props.manifest) {
+            let i = this.props.manifest[no]
             if (i.videos) {
                 this.albums.push(i)
             }
@@ -20,7 +21,7 @@ export default class Work extends React.Component {
                     return ({
                         title: e.album,
                         cover: e.files[0],
-                        link: "./event?category="+this.state.now+"&album="+i
+                        link: "./event?category="+no+"&album="+i
                     })
                 })
                 this.albums.push(thisCategory)
@@ -47,6 +48,7 @@ export default class Work extends React.Component {
                 albums = {[...e]}
                 hidden = {i==this.state.now ? false : true}
                 key = {i.toString()}
+                height = {this.props.height}
             />)
         ))
         return (
