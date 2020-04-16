@@ -259,8 +259,7 @@ var Header = function (_React$Component) {
                                 display: "flex",
                                 width: "100%",
                                 height: this.props.height + "px",
-                                justifyContent: "space-between",
-                                alignItems: "top"
+                                justifyContent: "space-between"
                             }
                         },
                         React.createElement("img", { src: this.props.logo, style: {

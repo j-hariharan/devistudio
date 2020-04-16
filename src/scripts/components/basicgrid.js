@@ -226,7 +226,7 @@ export default class BasicGrid extends React.Component {
     }
 
     handleClose () {
-        document.body.style.overflow = "scroll"
+        document.body.style.overflow = ""
         this.setState({open: false})
     }
 

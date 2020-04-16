@@ -43,8 +43,8 @@ header a:hover {
 
 @media (max-width: 750px) {
     cover {
-        height: 87vh;
-        margin-top: 12vh;
+        height: 90vh;
+        margin-top: 10vh;
     }
 }
 

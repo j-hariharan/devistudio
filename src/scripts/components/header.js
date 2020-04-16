@@ -246,7 +246,6 @@ export default class Header extends React.Component {
                         width: "100%",
                         height: this.props.height+"px",
                         justifyContent: "space-between",
-                        alignItems: "top"
                     }}
                     >
                         <img src = {this.props.logo} style = {{

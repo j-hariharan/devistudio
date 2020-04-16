@@ -9,7 +9,7 @@ export default function renderHeader (mobile) {
                 navLinks = {["./", "./work.html", "./about.html", "./contact.html"]}
                 mobile = {mobile}
                 ham = './images/static/icons/ham.png'
-                height = {mobile ? window.innerHeight*13/100 : window.innerHeight*7/100}
+                height = {mobile ? window.innerHeight*10/100 : window.innerHeight*7/100}
             />,
             document.getElementsByTagName('header')[0]
         )

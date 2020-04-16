@@ -247,7 +247,7 @@ var BasicGrid = function (_React$Component) {
     }, {
         key: "handleClose",
         value: function handleClose() {
-            document.body.style.overflow = "scroll";
+            document.body.style.overflow = "";
             this.setState({ open: false });
         }
     }, {

@@ -37,7 +37,7 @@ var Work = function (_React$Component) {
                     return {
                         title: e.album,
                         cover: e.files[0],
-                        link: "./event?category=" + no + "&album=" + i
+                        link: "./event.html?category=" + no + "&album=" + i
                     };
                 });
                 _this.albums.push(thisCategory);
