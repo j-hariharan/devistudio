@@ -167,7 +167,7 @@ var BasicGrid = function (_React$Component) {
                         columnFill: "balance"
                     } },
                 images,
-                React.createElement(
+                !this.props.openable && React.createElement(
                     "div",
                     { style: {
                             position: "fixed",
@@ -197,15 +197,17 @@ var BasicGrid = function (_React$Component) {
                         "span",
                         { onClick: this.moveRight, style: {
                                 color: "white",
-                                fontFamily: "Arial, Helvetica, sans-serif",
+                                fontFamily: "'Montserrat'",
                                 fontWeight: 900,
                                 height: "50px",
+                                width: "50px",
+                                textAlign: "center",
+                                lineHeight: "140%",
                                 position: "fixed",
-                                top: "48%",
+                                top: "45%",
                                 right: "20px",
-                                fontSize: "30px",
+                                fontSize: "35px",
                                 cursor: "pointer",
-                                padding: "5px 20px",
                                 borderRadius: "5px",
                                 backgroundColor: "rgba(0,0,0,0.8)"
                             } },
@@ -215,16 +217,18 @@ var BasicGrid = function (_React$Component) {
                         "span",
                         { onClick: this.moveLeft, style: {
                                 color: "white",
-                                fontFamily: "Arial, Helvetica, sans-serif",
+                                fontFamily: "'Montserrat'",
                                 fontWeight: 900,
                                 height: "50px",
+                                width: "50px",
+                                textAlign: "center",
+                                lineHeight: "140%",
                                 position: "fixed",
-                                top: "48%",
+                                top: "45%",
                                 left: "20px",
-                                fontSize: "30px",
+                                fontSize: "35px",
                                 cursor: "pointer",
                                 userSelect: "none",
-                                padding: "5px 20px",
                                 borderRadius: "5px",
                                 backgroundColor: "rgba(0,0,0,0.8)"
                             } },
@@ -236,33 +240,39 @@ var BasicGrid = function (_React$Component) {
     }, {
         key: "componentDidMount",
         value: function componentDidMount() {
+            if (this.props.openable) return false;
             document.body.addEventListener("keydown", this.keyClicked);
         }
     }, {
         key: "handleClick",
         value: function handleClick(i) {
+            if (this.props.openable) return false;
             document.body.style.overflow = "hidden";
             this.setState({ open: i, prev: i });
         }
     }, {
         key: "handleClose",
         value: function handleClose() {
+            if (this.props.openable) return false;
             document.body.style.overflow = "";
             this.setState({ open: false });
         }
     }, {
         key: "moveRight",
         value: function moveRight() {
+            if (this.props.openable) return false;
             this.setState({ open: this.state.open + 1 < this.props.images.length ? this.state.open + 1 : 0 });
         }
     }, {
         key: "moveLeft",
         value: function moveLeft() {
+            if (this.props.openable) return false;
             this.setState({ open: this.state.open > 0 ? this.state.open - 1 : this.props.images.length });
         }
     }, {
         key: "keyClicked",
         value: function keyClicked(e) {
+            if (this.props.openable) return false;
             if (this.state.open !== false) if (e.key == "ArrowRight") this.moveRight();else if (e.key == "ArrowLeft") this.moveLeft();
         }
     }]);

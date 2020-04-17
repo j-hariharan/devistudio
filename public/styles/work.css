@@ -25,9 +25,9 @@ work div #work-nav span:hover {
 
 work div #work-nav span#work-nav-active {
     color: white;
-    border-bottom: 2px solid  rgb(13,27,218);
+    border-bottom: 3px solid #aaa;
     font-weight: 600;
-    background-color: rgb(13, 27, 218)
+    background-color: rgba(0,106, 192, 0.8)
 }
 
 work div #work-nav span#work-nav-active:hover {

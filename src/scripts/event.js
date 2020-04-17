@@ -51,7 +51,7 @@ function handleResize () {
             images = {[...images]}
             columns = {columns}
             gap = {10}
-            openable = {true}
+            openable = {mobile}
             openTime = {500}
         />,
         document.getElementsByTagName('basic-grid')[0]

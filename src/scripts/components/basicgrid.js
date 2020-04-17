@@ -151,7 +151,7 @@ export default class BasicGrid extends React.Component {
             }}>
                 {images}
 
-                <div style = {{
+                {!this.props.openable && <div style = {{
                     position: "fixed",
                     top: "0px",
                     left: "0px",
@@ -179,15 +179,17 @@ export default class BasicGrid extends React.Component {
 
                     <span onClick = {this.moveRight} style = {{
                         color: "white",
-                        fontFamily: "Arial, Helvetica, sans-serif",
+                        fontFamily: "'Montserrat'",
                         fontWeight: 900,
                         height: "50px",
+                        width: "50px",
+                        textAlign: "center",
+                        lineHeight: "140%",
                         position: "fixed",
-                        top: "48%",
+                        top: "45%",
                         right: "20px",
-                        fontSize: "30px",
+                        fontSize: "35px",
                         cursor: "pointer",
-                        padding: "5px 20px",
                         borderRadius: "5px",
                         backgroundColor: "rgba(0,0,0,0.8)"
                     }}>
@@ -196,49 +198,57 @@ export default class BasicGrid extends React.Component {
 
                     <span onClick = {this.moveLeft} style = {{
                         color: "white",
-                        fontFamily: "Arial, Helvetica, sans-serif",
+                        fontFamily: "'Montserrat'",
                         fontWeight: 900,
                         height: "50px",
+                        width: "50px",
+                        textAlign: "center",
+                        lineHeight: "140%",
                         position: "fixed",
-                        top: "48%",
+                        top: "45%",
                         left: "20px",
-                        fontSize: "30px",
+                        fontSize: "35px",
                         cursor: "pointer",
                         userSelect: "none",
-                        padding: "5px 20px",
                         borderRadius: "5px",
                         backgroundColor: "rgba(0,0,0,0.8)"
                     }}>
                         {"<"}
                     </span>
-                </div>
+                </div>}
             </div>
         )
     }
 
     componentDidMount () {
+        if (this.props.openable) return false
         document.body.addEventListener("keydown", this.keyClicked)
     }
 
     handleClick (i) {
+        if (this.props.openable) return false
         document.body.style.overflow = "hidden"
         this.setState({open: i, prev: i})
     }
 
     handleClose () {
+        if (this.props.openable) return false
         document.body.style.overflow = ""
         this.setState({open: false})
     }
 
     moveRight () {
+        if (this.props.openable) return false
         this.setState({open: this.state.open+1 < this.props.images.length ? this.state.open+1 : 0})
     }
 
     moveLeft () {
+        if (this.props.openable) return false
         this.setState({open: this.state.open > 0 ? this.state.open-1 : this.props.images.length})
     }
 
     keyClicked (e) {
+        if (this.props.openable) return false
         if (this.state.open !== false)
             if(e.key == "ArrowRight") this.moveRight()
             else if (e.key == "ArrowLeft") this.moveLeft()

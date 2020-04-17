@@ -14,10 +14,17 @@ print(x.text)
 
 import os
 
+
+convertCover = False
+convertSnap = False
+convertWork = False
+
 os.chdir('public/images/dynamic')
 
 
-
+def convert (path):
+    cmd = 'ffmpeg -i "'+path+'" -q:v 31 -y "'+path+'"'
+    os.system(cmd)
 
 
 # WORK section ===============================
@@ -42,6 +49,7 @@ for category in os.listdir("work/"):
             paths = []
 
             for file in files:
+                if convertWork: convert('./work/'+category+"/"+album+"/"+file)
                 paths.append("./images/dynamic/work/"+category.replace(" ", "%20")+"/"+album.replace(" ", "%20")+"/"+file.replace(" ", "%20"))
             
             albums.append({'album': album, 'files': paths})
@@ -54,7 +62,12 @@ for category in os.listdir("work/"):
 
 cover = []
 
+def convertCover (path):
+    cmd = 'ffmpeg -i "'+path+'" -q:v 13 -y "'+path+'"'
+    os.system(cmd)
+
 for file in os.listdir("cover/"):
+    if convertCover: convertCover("./cover/"+file)
     cover.append("./images/dynamic/cover/"+file.replace(" ", "%20"))
 
 
@@ -63,6 +76,7 @@ for file in os.listdir("cover/"):
 snapshots = []
 
 for file in os.listdir("snapshots/"):
+    if convertSnap: convert("./snapshots/"+file)
     snapshots.append("./images/dynamic/snapshots/"+file.replace(" ", "%20"))
 
 

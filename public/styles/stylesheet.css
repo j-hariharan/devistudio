@@ -8,6 +8,10 @@ body {
     height: 100vh;
 }
 
+@media (max-width: 750px) {
+    * {cursor: initial !important}
+}
+
 
 
 
@@ -19,7 +23,7 @@ header {
     opacity: 1;
     z-index: 1;
     width: 100%;
-    color: purple;
+    color: rgb(0, 106, 192);
     background-color: white;
     top: 0px;
     left: 0px;
@@ -106,7 +110,7 @@ footer a#contact-button {
     width: 130px;
     margin: 30px auto 0px auto;
     padding: 15px;
-    background-color: #a066a0;
+    background-color: rgba(0,106, 192, 0.5);
     color: white;
     font-size: 15px;
     text-decoration: none;

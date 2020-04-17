@@ -39,7 +39,7 @@ function handleResize () {
             columns = {columns}
             gap = {10}
             height = {rowHeight}
-            openable = {true}
+            openable = {mobile}
             openTime = {500}
         />,
         document.getElementsByTagName('basic-grid')[0]
@@ -75,7 +75,7 @@ function showMore () {
             columns = {columns}
             gap = {10}
             height = {rowHeight}
-            openable = {true}
+            openable = {mobile}
             openTime = {500}
         />,
         document.getElementsByTagName('basic-grid')[0]
@@ -95,7 +95,7 @@ function showLess () {
             columns = {columns}
             gap = {10}
             height = {rowHeight}
-            openable = {true}
+            openable = {mobile}
             openTime = {500}
         />,
         document.getElementsByTagName('basic-grid')[0]
