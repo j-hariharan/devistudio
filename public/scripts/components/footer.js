@@ -15,10 +15,9 @@ export default function Footer(props) {
                 null,
                 "Follow us on our social media..."
             ),
-            React.createElement("img", { src: "./social/fb.jpg" }),
-            "'",
-            React.createElement("img", { src: "./social/insta.jpg" }),
-            React.createElement("img", { src: "./social/yt.jpg" })
+            React.createElement("img", { src: "./images/static/icons/fb.png" }),
+            React.createElement("img", { src: "./images/static/icons/insta.png" }),
+            React.createElement("img", { src: "./images/static/icons/yt.png" })
         ),
         React.createElement(
             "div",

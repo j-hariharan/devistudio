@@ -15,7 +15,7 @@ print(x.text)
 import os
 
 
-convertCover = False
+convertCover = True
 convertSnap = False
 convertWork = False
 
@@ -63,7 +63,7 @@ for category in os.listdir("work/"):
 cover = []
 
 def convertCover (path):
-    cmd = 'ffmpeg -i "'+path+'" -q:v 13 -y "'+path+'"'
+    cmd = 'ffmpeg -i "'+path+'" -q:v 30 -y "'+path+'"'
     os.system(cmd)
 
 for file in os.listdir("cover/"):

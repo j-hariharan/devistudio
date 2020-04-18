@@ -4,9 +4,9 @@ export default function Footer (props) {
             <div>
                 <h2>Check out more of our work</h2>
                 <h3>Follow us on our social media...</h3>
-                <img src = "./social/fb.jpg" />'
-                <img src = "./social/insta.jpg" />
-                <img src = "./social/yt.jpg" />
+                <img src = "./images/static/icons/fb.png" />
+                <img src = "./images/static/icons/insta.png" />
+                <img src = "./images/static/icons/yt.png" />
             </div>
             <div>
                 <h2>Looking for an event photographer...?</h2>
