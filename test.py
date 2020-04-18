@@ -55,6 +55,11 @@ def parse (name):
 
     return name
 
+def getLink (name):
+    name.replace(" ", "%20")
+    name.replace("#", "%23")
+    return name
+
 
 # WORK section ===============================
 
@@ -79,7 +84,7 @@ for category in os.listdir("work/"):
 
             for file in files:
                 if convertWork: convert('./work/'+category+"/"+album+"/"+file)
-                paths.append("./images/dynamic/work/"+category.replace(" ", "%20")+"/"+album.replace(" ", "%20")+"/"+file.replace(" ", "%20"))
+                paths.append("./images/dynamic/work/"+getLink(category)+"/"+getLink(album)+"/"+getLink(file))
             
             albums.append({'album': album, 'files': paths})
 
@@ -97,7 +102,7 @@ def converterCover (path):
 
 for file in os.listdir("cover/"):
     if convertCover: converterCover("./cover/"+file)
-    cover.append("./images/dynamic/cover/"+file.replace(" ", "%20"))
+    cover.append("./images/dynamic/cover/"+getLink(file))
 
 
 # SNAPSHOTS section ===============
@@ -106,7 +111,7 @@ snapshots = []
 
 for file in os.listdir("snapshots/"):
     if convertSnap: convert("./snapshots/"+file)
-    snapshots.append("./images/dynamic/snapshots/"+file.replace(" ", "%20"))
+    snapshots.append("./images/dynamic/snapshots/"+getLink(file))
 
 
 
