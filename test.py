@@ -56,8 +56,8 @@ def parse (name):
     return name
 
 def getLink (name):
-    name.replace(" ", "%20")
-    name.replace("#", "%23")
+    name = name.replace(" ", "%20")
+    name = name.replace("#", "%23")
     return name
 
 
