@@ -15,7 +15,25 @@ print(x.text)
 import os
 
 
-convertCover = True
+
+
+
+# CHANGE THIS TO DIRECTLY UPLOAD
+# THIS VALUE CAN EITHER BE 
+# False
+# or
+# True
+
+directlyUpload = True
+
+
+
+
+
+
+
+
+convertCover = False
 convertSnap = False
 convertWork = False
 
@@ -25,6 +43,17 @@ os.chdir('public/images/dynamic')
 def convert (path):
     cmd = 'ffmpeg -i "'+path+'" -q:v 31 -y "'+path+'"'
     os.system(cmd)
+
+def parse (name):
+    if name[0] == "#":
+        newStr = ""
+        i=3
+        while i<len(name):
+            newStr += name[i]
+            i+=1
+        return newStr
+
+    return name
 
 
 # WORK section ===============================
@@ -39,7 +68,7 @@ for category in os.listdir("work/"):
             for line in f:
                 links.append(line.replace("\n", ""))
 
-        work.append({'category': category, 'videos': True, 'links': links})
+        work.append({'category': parse(category), 'videos': True, 'links': links})
 
     else:
         albums = []
@@ -54,7 +83,7 @@ for category in os.listdir("work/"):
             
             albums.append({'album': album, 'files': paths})
 
-        work.append({'category': category, 'albums': albums})
+        work.append({'category': parse(category), 'albums': parse(albums)})
 
 
 
@@ -62,12 +91,12 @@ for category in os.listdir("work/"):
 
 cover = []
 
-def convertCover (path):
+def converterCover (path):
     cmd = 'ffmpeg -i "'+path+'" -q:v 30 -y "'+path+'"'
     os.system(cmd)
 
 for file in os.listdir("cover/"):
-    if convertCover: convertCover("./cover/"+file)
+    if convertCover: converterCover("./cover/"+file)
     cover.append("./images/dynamic/cover/"+file.replace(" ", "%20"))
 
 
@@ -92,5 +121,10 @@ with open('../../manifest.js', 'w') as f:
     f.write(str(manifest).replace("True", "true"))
 
 
+if directlyUpload:
+    os.chdir("../../../")
+    os.system("git add .")
+    os.system('git commit -m "Auto: Added Photos"')
+    os.system("git push origin master")
 
             
