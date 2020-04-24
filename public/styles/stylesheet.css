@@ -6,6 +6,7 @@ body {
 
     font-family: 'Montserrat';
     height: 100vh;
+    background-color: black;
 }
 
 @media (max-width: 750px) {
@@ -23,11 +24,11 @@ header {
     opacity: 1;
     z-index: 1;
     width: 100%;
-    color: rgb(0, 106, 192);
-    background-color: white;
+    color: rgb(157, 231, 250); /*rgb(0, 106, 192)*/
+    background-color: black;
     top: 0px;
     left: 0px;
-    box-shadow: 0px 4px 15px #dddddd;
+    box-shadow: 0px 4px 15px #222222;
     font-size: 15px;
 }
 
@@ -67,8 +68,9 @@ cover {
 
 footer {
     width: 100%;
-    background-color: #f9f9f9;
-    box-shadow: 0px -4px 15px #cccccc;
+    background-color: #333333;
+    color: white;
+    box-shadow: 0px -4px 15px #222222;
     padding: 20px 0px;
     margin: 100px 0px 0px 0px;
     font-family: 'Montserrat';
@@ -122,7 +124,7 @@ footer a#contact-button {
     width: 130px;
     margin: 30px auto 0px auto;
     padding: 15px;
-    background-color: rgba(0,106, 192, 0.5);
+    background-color: rgba(0,106, 192, 0.8);
     color: white;
     font-size: 15px;
     text-decoration: none;

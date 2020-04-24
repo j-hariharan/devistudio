@@ -15,12 +15,17 @@
 
     <style>
 
-        @import url('https://fonts.googleapis.com/css?family=Parisienne|Rokkitt&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Parisienne|Rokkitt:600,500&display=swap');
+
+
+        #about-container {
+            background-image: url('../images/static/New2.jpg');
+        }
 
         #about {
             max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
+            margin: 0px auto;
+            padding: 50px 20px;
         }
 
         #about img {
@@ -42,9 +47,10 @@
 		}
 		
         #about p {
-            font-size: 24px;
+            font-size: 30px;
+            font-weight: 600;
             line-height: 1.3em;
-            text-align: justify;
+            text-align: center;
             font-family: 'Rokkitt';
         }
 
@@ -99,6 +105,10 @@
 
 
 
+        #pics {
+            width: 100%;
+            background-color: black;
+        }
 
         basic-grid {
             display: block;
@@ -129,18 +139,18 @@
     <header></header>
     <cover></cover>
 
-    <div id="about">
+    <div id="about-container"><div id="about">
         <img src="./images/static/icons/logo.png" alt="Devi Studio">
         <h1>Devi Studio</h1>
         <p>Hailing from Bangalore, the garden city, we at Devi Studio are passionate about photography and videography that captures a multitude of emotions and memories during your events. Photography is an art that is mastered with experience. With an experience of over 40 years in this field, we are masters at our art and will make sure that not a single memory slips away from our lenses. </p>        
         <a href = "./about.html" class = "button">LEARN MORE</a>
-    </div>
+    </div></div>
 
     <div id="cover">
         <h2>The Snapshots....</h2>
     </div>
 
-    <basic-grid></basic-grid>
+    <div id = "pics"><basic-grid></basic-grid></div>
     <a class="button" id = "showMoreButton">VIEW MORE</a>
     <footer></footer>
 

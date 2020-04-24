@@ -160,7 +160,7 @@ export default class BasicGrid extends React.Component {
                     transform: this.state.open !== false ? "translateY(0px)" : "translateY(-100vh)",
                     transition: "500ms",
                     zIndex: 2,
-                    backgroundColor: "rgba(0,0,0,0.8)"
+                    backgroundColor: "rgba(0,0,0,1)"
                 }} >
                     <img src = {this.props.images[this.state.open] || this.props.images[this.state.prev]} style = {{
                         objectFit: "contain",

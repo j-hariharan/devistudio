@@ -17,6 +17,7 @@ work div #work-nav span {
     cursor: pointer;
     border-bottom: 0.5px solid #cccccc;
     border-radius: 5px 5px 0px 0px;
+    color: rgb(157, 231, 250);
 }
 
 work div #work-nav span:hover {
