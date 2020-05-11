@@ -1,179 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devi Studio</title>
+    <title>Devi Studio - Home</title>
 
-    <link rel="stylesheet" href="./styles/stylesheet.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script defer src="./scripts/script.js"></script>
+    <script defer type = "module" src="./scripts/cover.js"></script>
+    <script defer type = "module" src="./scripts/snapshots.js"></script>
+    <script defer src="./scripts/grid.js"></script>
 
-    <link rel="shortcut icon" href="./images/static/icons/logo.png" type="image/png">
-
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+    <link rel="stylesheet" href="./styles/cover.css">
+    <link rel="stylesheet" href="./styles/grid.css">
 
     <style>
-
-        @import url('https://fonts.googleapis.com/css?family=Parisienne|Rokkitt:600,500&display=swap');
-
-
-        #about-container {
-            background-image: url('../images/static/New2.jpg');
+        #about {
+            width: 100%;
+            background-image: url('./images/static/New2.jpg');
+            background-color: #aaaaaa;
+            margin: 20px 0px;
+            padding: 10px 0px;
         }
 
-        #about {
-            max-width: 800px;
-            margin: 0px auto;
-            padding: 50px 20px;
+        #about .heading {
+            color: black;
+            font-size: 55px;
         }
 
         #about img {
-            height: 100px;
             display: block;
             margin: 0px auto;
+            padding: 20px;
+            color: black;
         }
 
-        #about h1 {
-            font-size: 60px;
-            text-align: center;
-            font-family: 'Parisienne';
-            font-weight: 700;
-        }
-
-		@media (max-width: 750px) {
-			#about h1 {font-size: 45px}
-			#about img {height: 75px}
-		}
-		
         #about p {
-            font-size: 30px;
+            max-width: 1000px;
+            margin: 0px auto;
+            padding: 40px 30px;
+            font-family: 'Rokitt', sans-serif;
             font-weight: 600;
-            line-height: 1.3em;
-            text-align: center;
-            font-family: 'Rokkitt';
-        }
-
-        a.button {
-            display: block;
-            width: 130px;
-            margin: 30px auto;
-            padding: 15px;
-            background-color: rgb(0,106, 192);
-            color: white;
-            font-size: 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: center;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        a.button:hover {
-            opacity: 0.8;
+            font-size: 22px;
+            text-align: justify;
+            line-height: 1.7em;
         }
 
 
 
 
+        #snapshots-cover {
+            width: 100%;
+            height: 500px;
 
-        #cover {
-            background-image: url('./images/static/snapshots-cover.jpg');
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+
+            background-image: url(./images/static/snapshots-cover.jpg);
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            width: 100%;
-            height: 600px;
         }
 
-        @supports (-webkit-border-after-color: black) {
-            #cover {background-attachment: scroll}
-        }
 
-        #cover h2 {
-            font-size: 60px;
-            display: inline;
-            position: relative;
-            top: 45%;
-            left: 20%;
+        #snapshots-cover h3 {
+            font-size: 50px;
             font-weight: 600;
             font-family: 'Parisienne';
             color: black;
-            text-shadow: 3px 3px white;
+            text-shadow: 3px 3px white;   
+            margin: 25px 0px;         
         }
-
-
-
-        #pics {
-            width: 100%;
-            background-color: black;
-        }
-
-        basic-grid {
-            display: block;
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 10px;
-        }
-
-        @media (max-width: 500px) {
-            #cover h2 {
-                font-size: 50px;
-                left: 5%;
+        
+        @media (min-width: 800px) {
+            #snapshots-cover {
+                height: 600px;
+                justify-content: left;
+                align-items: center;
             }
-        }
-
-        @media (max-width: 800px) {
-            #cover {
-                background-attachment: scroll;
-            }
-            basic-grid span {
-                cursor: initial !important;
+            #snapshots-cover h3 {
+                font-size: 60px;
+                margin: 0px 0px 0px 300px;
             }
         }
 
     </style>
+
 </head>
+
 <body>
-    <header></header>
+    <header>
+        <img src="./images/static/logo.png" alt="Devi Studio">
+        <a href="#"><img src="./images/static/icons/ham.png" alt="navigate"></a>
+        <ul>
+            <li><a href = "./">HOME</a></li>
+            <li><a href = "./work.html">OUR WORK</a></li>
+            <li><a href = "./about.html">ABOUT US</a></li>
+            <li><a href = "./contact.html">CONTACT US</a></li>
+        </ul>
+    </header>
+
     <cover></cover>
 
-    <div id="about-container"><div id="about">
-        <img src="./images/static/icons/logo.png" alt="Devi Studio">
-        <h1>Devi Studio</h1>
-        <p>Hailing from Bangalore, the garden city, we at Devi Studio are passionate about photography and videography that captures a multitude of emotions and memories during your events. Photography is an art that is mastered with experience. With an experience of over 40 years in this field, we are masters at our art and will make sure that not a single memory slips away from our lenses. </p>        
-        <a href = "./about.html" class = "button">LEARN MORE</a>
-    </div></div>
-
-    <div id="cover">
-        <h2>The Snapshots....</h2>
+    <div id="about">
+        <img src="./images/static/icons/logo.png" alt="">
+        <h1 class = "heading">Devi Studio</h1>
+        <p>Hailing from Bangalore, the garden city, we at Devi Studio are passionate about photography and
+            videography that captures a multitude of emotions and memories during your events. Photography is an art
+            that is mastered with experience. With an experience of over 40 years in this field, we are masters at
+            our art and will make sure that not a single memory slips away from our lenses. </p>
+        <a href="./about.html" class="button">LEARN MORE</a>
     </div>
 
-    <div id = "pics"><basic-grid></basic-grid></div>
-    <a class="button" id = "showMoreButton">VIEW MORE</a>
-    <footer></footer>
+    <div id="snapshots-cover">
+        <h3>The Snapshots...</h3>
+    </div>
 
-    <script src="./scripts/index.js" type = "module"></script>
+    <div id="grid"></div>
+    <div id="grid-modal" class="closed">
+        <img src="" alt="">
+        <img src="https://raw.githubusercontent.com/google/material-design-icons/master/navigation/svg/production/ic_close_48px.svg" alt="close">
+        <img src="https://raw.githubusercontent.com/google/material-design-icons/master/navigation/svg/production/ic_chevron_left_48px.svg" alt="">
+        <img src="https://raw.githubusercontent.com/google/material-design-icons/master/navigation/svg/production/ic_chevron_right_48px.svg" atlt="">
+    </div>
 
-    <script>
-        let about = document.getElementById('about')
+    <span class="button" id="viewMore">VIEW MORE</span>
 
-        let observerAbout = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) {
-                    entry.target.style.opacity = "0"
-                }
+    <footer>
+        <div>
+            <h2>Check out more of our work</h2>
+            <p>Follow us on our social media...</h3>
+            <div>
+                <img src="./images/static/icons/fb.png" alt="facebook" />
+                <img src="./images/static/icons/insta.png" alt="instagram"/>
+                <img src="./images/static/icons/yt.png" alt="youtube"/>
+            </div>
+        </div>
+        <div>
+            <h2>Looking for an event photographer...?</h2>
+            <p>We will make sure that every moment of your precious event is captured so that they can last forever.</p>
+            <h3>GET IN TOUCH NOW</h3>
+            <a class="button" href="./contact.html">CONTACT US</a>
+        </div>
+    </footer>
 
-                else if (entry.target.style.opacity == "0") {
-                    entry.target.classList.add('bounceInLeft', 'animated', 'slow')
-                    entry.target.style.opacity = "1"
-                    observer.disconnect()
-                }
-            })
-        })
-
-        observerAbout.observe(about)
-    </script>
 </body>
+
 </html>

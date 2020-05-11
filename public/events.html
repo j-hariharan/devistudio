@@ -3,35 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Work - Devi Studio</title>
+    <title>Devi Studio</title>
 
     <script defer src="./scripts/script.js"></script>
-    <script defer type = "module" src="./scripts/work.js"></script>
+    <script defer type = "module" src="./scripts/events.js"></script>
+    <script defer src="./scripts/grid.js"></script>
 
     <link rel="stylesheet" href="./styles/stylesheet.css">
-    <link rel="stylesheet" href="./styles/work.css">
+    <link rel="stylesheet" href="./styles/grid.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    
-    <style></style>
+    <style>
+        h1.heading {
+            font-size: 45px; 
+        }
+    </style>
+
+</head>
 <body>
 
     <header>
         <img src="./images/static/logo.png" alt="Devi Studio">
         <a href="#"><img src="./images/static/icons/ham.png" alt="navigate"></a>
         <ul>
-            <li><a href = "./">HOME</a></li>
-            <li><a href = "./work.html">OUR WORK</a></li>
-            <li><a href = "./about.html">ABOUT US</a></li>
-            <li><a href = "./contact.html">CONTACT US</a></li>
+            <li><a href="./">HOME</a></li>
+            <li><a href="./work.html">OUR WORK</a></li>
+            <li><a href="./about.html">ABOUT US</a></li>
+            <li><a href="./contact.html">CONTACT US</a></li>
         </ul>
     </header>
 
     <header-placeholder></header-placeholder>
 
-    <h1 class = "heading">Our Work</h1>
-    <h2 class = "sub-heading">a collection of our best work, all in one place...</h2>
-    <div id = "work"></div>
+    <h1 class="heading"></h1>
+
+    <div id="grid"></div>
+    <div id="grid-modal" class="closed">
+        <img src="" alt="">
+        <img src="https://raw.githubusercontent.com/google/material-design-icons/master/navigation/svg/production/ic_close_48px.svg" alt="close">
+        <img src="https://raw.githubusercontent.com/google/material-design-icons/master/navigation/svg/production/ic_chevron_left_48px.svg" alt="">
+        <img src="https://raw.githubusercontent.com/google/material-design-icons/master/navigation/svg/production/ic_chevron_right_48px.svg" atlt="">
+    </div>
 
     <footer>
         <div>
@@ -50,8 +61,6 @@
             <a class="button" href="./contact.html">CONTACT US</a>
         </div>
     </footer>
-
-
     
 </body>
 </html>

@@ -1,35 +1,146 @@
-import Header from './script.js';
-import Footer from './components/footer.js';
-import Work from './components/work.js';
-import manifest from '../manifest.js';
+import manifest from '../manifest.js'
 
-function handleResize() {
+let container = document.getElementById('work')
 
-    var height = void 0,
-        mobile = void 0;
+let activeCategory
 
-    if (window.innerWidth > 750) {
-        mobile = false;
-        height = 400;
-    } else if (window.innerWidth > 600) {
-        mobile = true;
-        height = 350;
-    } else if (window.innerWidth > 500) {
-        mobile = true;
-        height = 300;
-    } else if (window.innerWidth > 0) {
-        mobile = true;
-        height = 200;
+let categories = manifest.work
+
+
+// NAV SECTION
+let nav = document.createElement('div')
+nav.id = "nav"
+
+categories.map((e, i) => {
+    let element = document.createElement('span')
+    element.addEventListener('click', () => navCategory(i))
+    element.innerText = e.category
+
+    if (i == 0) element.id = "active"
+
+    nav.appendChild(element)
+})
+
+container.appendChild(nav)
+
+
+
+
+let albumsContainer = document.createElement('div')
+albumsContainer.id = "albums-container"
+container.appendChild(albumsContainer)
+
+navCategory(0)
+
+function navCategory(i) {
+    if (i == activeCategory) return null
+
+    albumsContainer.innerHTML = ''
+
+    activeCategory = i
+
+    if (!categories[i].videos)
+        categories[i].albums.map((e, j) => {
+            let element = document.createElement('div')
+
+            let link = document.createElement('a')
+            link.href = `./events.html?category=${activeCategory}&album=${j}`
+            link.innerText = e.album
+
+            element.classList.add('animate__animated', "animate__zoomIn")
+
+            element.style.backgroundImage = `url(${e.files[0]})`
+
+            element.appendChild(link)
+            albumsContainer.appendChild(element)
+        })
+
+    else 
+        categories[i].links.map((e,i) => {
+            let element = document.createElement('iframe')
+
+            element.classList.add("animate__animated", "animate__zoomIn")
+            element.src = `https://www.youtube.com/embed/${e.slice(e.indexOf("?v=")+3)}` 
+            element.frameBorder = "0"
+            element.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            element.allowFullscreen = true
+
+            albumsContainer.appendChild(element)
+        })
+    
+
+    for (let j = 0; j < nav.children.length; j++) {
+        let e = nav.children[j]
+
+        if (j == activeCategory)
+            e.id = "active"
+        else
+            e.id = ""
     }
 
-    Header(mobile);
 
-    ReactDOM.render(React.createElement(Work, {
-        manifest: manifest.work
-    }), document.getElementsByTagName('work')[0]);
+
+
 }
 
-document.body.onresize = handleResize;
-document.body.onload = handleResize;
+/* 
+<iframe
+    className = {props.hidden ? "" : "animated zoomIn"}
+    src = {props.hidden ? "" : `https://www.youtube.com/embed/${e.slice(e.indexOf("?v=")+3)}`}
+    frameBorder = "0"
+    allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+/>
+*/
 
-ReactDOM.render(React.createElement(Footer, null), document.getElementsByTagName('footer')[0]);
+
+
+
+
+/* let categories = [
+
+    {
+        category: 'Wedding',
+        albums: [
+            {
+                album: 'Someone weds someone',
+                files: []
+            },
+            {
+                album: "someone else + someone else",
+                files: []
+            }
+        ]
+    },
+    {
+        category: "Pre-wedding",
+        albums: [
+            {
+                album: 'Some prewedding',
+                files: [],
+            },
+            {
+                album: "another prewedding",
+                files: []
+            }
+        ]
+    },
+    {
+        category: "Short Video",
+        videos: true,
+        links: []
+    },
+    {
+        category: "Event Photography",
+        albums: [
+            {
+                album: "some album",
+                files: []
+            },
+            {
+                album: "some other event",
+                files: []
+            }
+        ]
+    }
+] */

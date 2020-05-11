@@ -1,0 +1,24 @@
+cover {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+cover div {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+
+    background-position: center;
+    background-size: cover;
+
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+cover div#active {
+    opacity: 1;
+}

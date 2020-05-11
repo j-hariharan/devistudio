@@ -7,116 +7,99 @@
 
     <link rel="stylesheet" href="./styles/stylesheet.css">
 
-    <link rel="shortcut icon" href="./images/static/icons/logo.png" type="image/png">
-
-    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script defer src="./scripts/script.js"></script>
 
     <style>
-
-        @import url('https://fonts.googleapis.com/css?family=Parisienne|Rokkitt&display=swap');
-        
-        body {
-            margin-top: 12vh;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 60px;
-            font-family: 'Parisienne';
-            color: white;
-        }
-
-        @media (max-width: 750px) {body {margin-top: 18vh}}
-
         #contact {
-            max-width: 1000px;
             display: flex;
-            justify-content: space-evenly;    
-            margin: 40px auto;
+            flex-direction: column;
+            width: 90%;
+            max-width: 1000px;
+            margin: 10px auto;
+
+            align-items: center;
+            justify-content: center;
         }
 
         #contact #details {
-            width: 40%;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: top;
-            align-items: top;
-        }
-        
-        #contact #details h2 {
-            margin: 0px 0px 60px 0px;
-            text-align: center;
-            font-size: 37px;
-            font-family: 'Parisienne';
+            width: 100%;
+            margin: 20px;
         }
 
         #contact #details div {
             display: flex;
-            justify-content: left;
             align-items: center;
-            margin: 15px 0px;
+            margin: 10px;
+        }
+
+        #contact #details div img {
+            height: 40px;
+            padding: 20px;
+            box-sizing: initial;
+            filter: invert(100%);
+        }
+
+        #contact #details div p {
+            color: white;
+            line-height: 1.4em;
+        }
+
+        #contact #details div p a {
             color: white;
         }
 
-        #contact #details img {
-            width: 50px;
-            height: 50px;
-            margin: 0px 25px;
-        }
-
-        #contact #details p {
-            vertical-align: middle;
-            font-size: 20px;
-            font-family: 'Rokkitt';
-        }
-
         #contact iframe {
-            width: 40%;
+            width: 100%;
             height: 500px;
-        }
-
-        @media (max-width: 800px) {
-            #contact {
-                flex-direction: column;
-                align-items: center;
-            }
-            #contact #details, #contact iframe {
-                width: 80%;
-            }
-        }
-
-        @media (max-width: 500px) {
-            #contact #details, #contact iframe {
-                width: 100%;
-            }
-
-            #contact #details img {
-                margin: 0px 10px;
-                height: 40px;
-                width: 40px;
-            }
         }
 
     </style>
 </head>
 <body>
-    <header></header>
-    <h1>Contact Us</h1>
+
+    <header>
+        <img src="./images/static/logo.png" alt="Devi Studio">
+        <a href="#"><img src="./images/static/icons/ham.png" alt="navigate"></a>
+        <ul>
+            <li><a href="./">HOME</a></li>
+            <li><a href="./work.html">OUR WORK</a></li>
+            <li><a href="./about.html">ABOUT US</a></li>
+            <li><a href="./contact.html">CONTACT US</a></li>
+        </ul>
+    </header>
+
+    <header-placeholder></header-placeholder>
+
+    <h1 class="heading">Contact Us</h1>
 
     <div id="contact">
         <div id="details">
-            <h2>Get in touch...</h2>
-            <div><img src="./images/static/icons/location.png" alt=""><p>#46/2, narashimha tower, 4th cross Rd, Sampige Rd, Near lalitha jewels, Malleshwaram, Bengaluru, Karnataka 560003</p></div>
-            <div><img src="./images/static/icons/call.jpg" alt=""><p><a href = "tel:+919845030224">+91 9845030224</p></a></div>
-            <div><img src="./images/static/icons/email.jpg" alt=""><p><a href="mailto:devistudio1980@gmail.com">devistudio1980@gmail.com</a></p></div>
+            <h2 class = "sub-heading">Get in touch...</h2>
+            <div><img src="https://raw.githubusercontent.com/google/material-design-icons/master/communication/2x_web/ic_location_on_black_48dp.png" alt=""><p>#46/2, narashimha tower, 4th cross Rd, Sampige Rd, Near lalitha jewels, Malleshwaram, Bengaluru, Karnataka 560003</p></div>
+            <div><img src="https://raw.githubusercontent.com/google/material-design-icons/master/communication/2x_web/ic_call_black_48dp.png" alt=""><p><a href = "tel:+919845030224">+91 9845030224</p></a></div>
+            <div><img src="https://raw.githubusercontent.com/google/material-design-icons/master/communication/2x_web/ic_mail_outline_black_48dp.png" alt=""><p><a href="mailto:devistudio1980@gmail.com">devistudio1980@gmail.com</a></p></div>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.6165090280974!2d77.57017851488546!3d12.99636239083962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae162e4fd6d74d%3A0xd419602e1471b826!2sDevi%20Studio!5e0!3m2!1sen!2sin!4v1586344734828!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
 
-    <footer></footer>
 
-    <script src="./scripts/contact.js" type="module"></script>
+    <footer>
+        <div>
+            <h2>Check out more of our work</h2>
+            <p>Follow us on our social media...</h3>
+            <div>
+                <img src="./images/static/icons/fb.png" alt="facebook" />
+                <img src="./images/static/icons/insta.png" alt="instagram" />
+                <img src="./images/static/icons/yt.png" alt="youtube" />
+            </div>
+        </div>
+        <div>
+            <h2>Looking for an event photographer...?</h2>
+            <p>We will make sure that every moment of your precious event is captured so that they can last forever.</p>
+            <h3>GET IN TOUCH NOW</h3>
+            <a class="button" href="./contact.html">CONTACT US</a>
+        </div>
+    </footer>
+    
 </body>
 </html>
