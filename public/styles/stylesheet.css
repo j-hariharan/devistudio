@@ -60,7 +60,7 @@ header a {
     height: 70%;
     margin: 10px 20px;
     z-index: 4;
-    cursor: inherit;
+    cursor: default;
 }
 
 header a img {
@@ -91,7 +91,7 @@ header ul {
 
 header ul li {
     padding: 15px 0px;
-    font-weight: 600;
+    font-weight: 700;
     border-bottom: 0.5px solid #555555;
     width: 90%;
     text-align: center;
@@ -231,15 +231,10 @@ footer div div {
 
 footer div div img {
     height: 28px;
-    filter: grayscale(100%);
+    filter: invert(100%);
     transition: 0.3s;
     padding: 15px;
     box-sizing: initial;
-}
-
-
-footer div div img:hover {
-    filter: grayscale(20%);
 }
 
 footer .button {
@@ -268,7 +263,7 @@ footer>div {
 
 
 
-@media (any-pointer) {
+@media (any-hover) {
     .button {
         cursor: pointer;
     }
@@ -279,5 +274,13 @@ footer>div {
 
     header a {
         cursor: pointer;
+    }
+
+    header ul li {
+        transition: 0.3s;
+    }
+    
+    header ul li:hover {
+        margin-bottom: 0.4em;
     }
 }
