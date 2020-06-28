@@ -27,6 +27,25 @@
     opacity: 0.7;
 }
 
+#work #nav span#active:hover {
+    opacity: 1;
+}
+
+@media (any-hover) {
+    #work #nav span {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 600px) {
+    #work #nav span {
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+}
+
+
+
 #work #nav span#active {
     color: white;
     border-bottom: 3px solid #aaa;
@@ -65,6 +84,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     font-family: 'Parisienne', sans-serif;
     color: white;
     text-decoration: none;
@@ -79,4 +99,27 @@
     background-color: #222222;
     border-radius: 20px;
     margin: 20px;
+}
+
+@media (max-width: 900px) {
+    #work #albums-container div {
+        max-width: 300px;
+        height: 175px;
+    }
+    
+    #work #albums-container div a {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    #work #albums-container div {
+        max-width: initial;
+        height: calc(100vw * 1 / 2);
+    }
+
+    #work #albums-container iframe {
+        width: 100%;
+        height: calc(100vw * 2 / 3);
+    }
 }
