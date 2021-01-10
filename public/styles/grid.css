@@ -57,13 +57,13 @@
 }
 
 #grid-modal img:nth-child(2) {
-    height: 30px;
+    height: 40px;
     position: absolute;
     right: 10px;
     top: 10px;
     filter: invert(100%);
 
-    padding: 10px;
+    padding: 0px;
     border-radius: 50%;
     background-color: white;
 
@@ -92,13 +92,13 @@
 
 @media (any-hover) {
 
-#grid-modal img:nth-child(2), #grid-modal img:nth-child(3), #grid-modal img:nth-child(4) {
-    cursor: pointer;
-} 
+    #grid-modal img:nth-child(2), #grid-modal img:nth-child(3), #grid-modal img:nth-child(4) {
+        cursor: pointer;
+    } 
 
-#grid img {
-    cursor: pointer;
-}
+    #grid img {
+        cursor: pointer;
+    }
 
 }
 
@@ -106,10 +106,10 @@
     #grid-modal img:nth-child(2) {
         right: 40px;
         top: 30px;
-        height: 45px;
+        height: 50px;
     }
 
     #grid-modal img:nth-child(3), #grid-modal img:nth-child(4) {
-        height: 75px;
+        height: 55px;
     }
 }
