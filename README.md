@@ -9,7 +9,7 @@
 - start coding!!
 
 ### Get changes:
-- double click get.exe
+- double click pull.exe
 
 ### Push changes:
 - double click push.exe
