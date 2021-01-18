@@ -194,7 +194,7 @@ iframe, #live img {
         font-size: 50px;
     }
 
-    #live p:nth-of-type(2) {
+    #live p {
         font-size: 18px;
     }
 }
@@ -210,7 +210,7 @@ iframe, #live img {
         font-size: 35px;
     }
     
-    #live p:nth-of-type(2) {
+    #live p {
         font-size: 15px;
     }
 }
