@@ -5,6 +5,14 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ]
+    ],
+
+    "headers": [ {
+      "source": "/live/**",
+      "headers": [ {
+        "key": "Cache-Control",
+        "value": "no-store"
+      } ]
+    },
   }
 }

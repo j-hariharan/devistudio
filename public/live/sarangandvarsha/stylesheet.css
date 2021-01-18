@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Parisienne&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: yellowgreen;
+    margin-top: 100px;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
+    z-index: 3;
+}
+
+#invitation {
+    background-color: #0a3d33;
+    background-image: url('./bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#invitation img {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+
+    opacity: 1;
+    position: relative;
+
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+
+    --fadein-bottom: 10vh;
+}
+
+#invitation video {
+    width: 600px;
+    height: 350px;
+    padding: 70px 0px;
+}
+
+
+@media (max-width: 450px) {
+    #invitation video {
+        width: 85vw;
+        height: calc(85vw * 320 / 550);
+    }
+}
+
+
+@media (max-width: 700px) {
+    #invitation video {
+        width: 90vw;
+        height: calc(90vw * 320 / 550);
+    }
+}
+
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        bottom: var(--fadein-bottom);
+    }
+    100% {
+        opacity: 1;
+        bottom: 0vh;
+    }
+}
+
+
+
+
+#details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px;
+}
+
+#details #left {
+    width: 40%;
+    text-align: center;
+}
+
+#details #left #name {
+    margin: 50px auto;
+}
+
+#details #left #name h1 {
+    margin: 0px;
+    font-size: 55px;
+    font-family: 'Parisienne';
+}
+
+#details #left #name h2 {
+    /* font-family: 'Parisienne'; */
+    font-size: 30px;
+    margin: 13px 0px;
+}
+
+#details p {
+    font-size: 23px;
+}
+
+#details #right {
+    width: 55%;
+    text-align: right;
+}
+
+#details #right img {
+    width: 100%;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 500ms;
+    animation-fill-mode: both;
+    position: relative;
+    --fadein-bottom: 100px;
+}
+
+@media (max-width: 900px) {
+    #details {
+        flex-direction: column-reverse;
+    }
+    
+    #details #left, #details #right {
+        width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+#live {
+    background-color: #127460;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#live h1 {
+    font-family: 'Parisienne';
+    text-align: center;
+    font-size: 60px;
+}
+
+iframe {
+    width: 600px;
+    height: 350px;
+}
+
+@media (max-width: 700px) {
+    iframe {
+        width: 90vw;
+        height: calc(90vw * 320 / 550);
+    }
+
+    #live h1 {
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    iframe {
+        width: 85vw;
+        height: calc(85vw * 320 / 550);
+    }
+
+    #live h1 {
+        font-size: 35px;
+    }
+}
+
+
