@@ -59,7 +59,7 @@ body {
     }
 
     #invitation img {
-        height: 75vh;
+        height: auto;
     }
 }
 
