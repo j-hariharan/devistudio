@@ -52,10 +52,14 @@ body {
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
     #invitation video {
         width: 85vw;
         height: calc(85vw * 320 / 550);
+    }
+
+    #invitation img {
+        height: 75vh;
     }
 }
 
@@ -140,6 +144,10 @@ body {
     #details #left, #details #right {
         width: 90%;
     }
+
+    #details #left #name h1 {
+        font-size: 43px;
+    }
 }
 
 
@@ -161,6 +169,14 @@ body {
     font-family: 'Parisienne';
     text-align: center;
     font-size: 60px;
+    color: white;
+}
+
+#live p {
+    color: white;
+    font-size: 20px;
+    max-width: 800px;
+    text-align: justify;
 }
 
 iframe, #live img {
@@ -177,6 +193,10 @@ iframe, #live img {
     #live h1 {
         font-size: 50px;
     }
+
+    #live p:nth-of-type(2) {
+        font-size: 15px;
+    }
 }
 
 
@@ -192,3 +212,141 @@ iframe, #live img {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 0px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+}
+
+footer div:nth-child(1) {
+    border-bottom: 0.3px solid #aaaaaa;
+}
+
+footer div {
+    padding: 20px;
+}
+
+footer h2 {
+    font-size: 18px;
+    padding: 10px 0px;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+footer h3 {
+    font-size: 14px;
+    padding: 20px 0px;
+}
+
+footer div div {
+    display: flex;
+    justify-content: center;
+}
+
+footer div div img {
+    height: 28px;
+    filter: invert(100%);
+    transition: 0.3s;
+    padding: 15px;
+    box-sizing: initial;
+}
+
+footer .button {
+    opacity: 0.6;
+}
+
+
+@media (min-width: 950px) {
+
+footer div:nth-child(1) {
+    border-bottom: none;
+    border-right: 0.3px solid #aaaaaa;
+}
+
+footer {
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer>div {
+    width: 50%;
+    max-width: 450px;
+}
+
+}
+
+
+
+
+
+
+
+.button {
+    display: block;
+    width: 170px;
+    margin: 10px auto;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0,106, 192);
+    text-align: center;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.button:hover {
+    filter: brightness(110%)
+}
+
+
+
+
+
+@media (any-hover) {
+    .button {
+        cursor: pointer;
+    }
+
+    footer div div img {
+        cursor: pointer;
+    }
+
+    header a {
+        cursor: pointer;
+    }
+
+    header ul li {
+        transition: 0.3s;
+    }
+    
+    header ul li:hover {
+        margin-bottom: 0.4em;
+    }
+}
+
+
+
+footer a:not(.button) {
+    color: white;
+    font-size: 20px;
+}
