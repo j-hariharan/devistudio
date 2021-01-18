@@ -209,6 +209,10 @@ iframe, #live img {
     #live h1 {
         font-size: 35px;
     }
+    
+    #live p:nth-of-type(2) {
+        font-size: 12px;
+    }
 }
 
 
@@ -229,7 +233,7 @@ footer {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    background-color: #333333;
+    background-color: #06352c;
     color: white;
     text-align: center;
 }
@@ -275,6 +279,15 @@ footer .button {
 }
 
 
+
+
+footer a:not(.button) {
+    color: white;
+    font-size: 20px;
+}
+
+
+
 @media (min-width: 950px) {
 
 footer div:nth-child(1) {
@@ -290,6 +303,11 @@ footer {
 footer>div {
     width: 50%;
     max-width: 450px;
+}
+
+footer a:not(.button) {
+    color: white;
+    font-size: 16px;
 }
 
 }
@@ -342,11 +360,4 @@ footer>div {
     header ul li:hover {
         margin-bottom: 0.4em;
     }
-}
-
-
-
-footer a:not(.button) {
-    color: white;
-    font-size: 20px;
 }
