@@ -9,7 +9,11 @@
 
     "rewrites": [
       {
-        "regex": "\/|\/index.html",
+        "source": "/",
+        "destination": "/index_compiled.html"
+      },
+      {
+        "source": "/index.html",
         "destination": "/index_compiled.html"
       }
     ],
