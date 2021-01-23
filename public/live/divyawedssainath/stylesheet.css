@@ -97,7 +97,7 @@ body {
 }
 
 #details #left {
-    width: 40%;
+    width: 60%;
     text-align: center;
 }
 
@@ -122,7 +122,7 @@ body {
 }
 
 #details #right {
-    width: 55%;
+    width: 35%;
     text-align: right;
 }
 
