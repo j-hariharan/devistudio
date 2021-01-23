@@ -24,7 +24,7 @@ import os
 # or
 # True
 
-directlyUpload = True
+directlyUpload = False
 
 
 
@@ -124,6 +124,24 @@ manifest = {'cover': cover, 'snapshots': snapshots, 'work': work}
 with open('../../manifest.js', 'w') as f:
     f.write("export default ")
     f.write(str(manifest).replace("True", "true"))
+
+
+with open('../../index_compiled.html', 'w') as compiled:
+    index = open('../../index.html')
+    text = index.read()
+
+    image_tags = ''
+    image_links = manifest['snapshots']
+
+    for i in range(int(len(image_links)/2)):
+        image_tags += '<img src="'+image_links[i]+'" onclick="openModal('+str(i)+')">'
+
+
+
+    replaced_text = text.replace('<div id="grid"></div>', '<div id="grid">'+image_tags+'</div>')
+
+    compiled.write(replaced_text)
+    
 
 
 if directlyUpload:

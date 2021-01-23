@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devi Studio - Home</title>
+
+    <script defer type = "module" src="./scripts/cover.js"></script>
+    <script defer type = "module" src="./scripts/snapshots.js"></script>
+    <script defer src="./scripts/grid.js"></script>
+
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+    <link rel="stylesheet" href="./styles/cover.css">
+
+    <link rel="shortcut icon" href="./images/static/icons/logo.png" type="image/png">
+
+    <meta name="theme-color" content="#000000">
+
+</head>
+
+<body>
+    <header>
+        <img src="./images/static/logo.png" alt="Devi Studio">
+        <a tabindex="1"><img src="./images/static/icons/ham.png" alt="navigate"></a>
+        <ul>
+            <li><a href="./">HOME</a></li>
+            <li><a href="./work.html">OUR WORK</a></li>
+            <li><a href="./about.html">ABOUT US</a></li>
+            <li><a href="./contact.html">CONTACT US</a></li>
+        </ul>
+    </header>
+
+    <cover></cover>
+
+    <div id="about">
+        <img src="./images/static/icons/logo.png" alt="">
+        <h1 class="heading">Devi Studio</h1>
+        <p>Hailing from Bangalore, the garden city, we at Devi Studio are passionate about photography and
+            videography that captures a multitude of emotions and memories during your events. Photography is an art
+            that is mastered with experience. With an experience of over 40 years in this field, we are masters at
+            our art and will make sure that not a single memory slips away from our lenses. </p>
+        <a href="./about.html" class="button">LEARN MORE</a>
+    </div>
+
+    <div id="snapshots-cover">
+        <h3>The Snapshots...</h3>
+    </div>
+
+    <div id="grid"><img src="./images/dynamic/snapshots/001.jpg" onclick="openModal(0)"><img src="./images/dynamic/snapshots/004.jpg" onclick="openModal(1)"><img src="./images/dynamic/snapshots/006.jpg" onclick="openModal(2)"><img src="./images/dynamic/snapshots/008.jpg" onclick="openModal(3)"><img src="./images/dynamic/snapshots/010.jpg" onclick="openModal(4)"><img src="./images/dynamic/snapshots/011.jpg" onclick="openModal(5)"><img src="./images/dynamic/snapshots/014.jpg" onclick="openModal(6)"><img src="./images/dynamic/snapshots/016.jpg" onclick="openModal(7)"><img src="./images/dynamic/snapshots/018.jpg" onclick="openModal(8)"><img src="./images/dynamic/snapshots/021.jpg" onclick="openModal(9)"><img src="./images/dynamic/snapshots/022.jpg" onclick="openModal(10)"><img src="./images/dynamic/snapshots/023.jpg" onclick="openModal(11)"><img src="./images/dynamic/snapshots/1.jpg" onclick="openModal(12)"><img src="./images/dynamic/snapshots/10.jpg" onclick="openModal(13)"></div>
+    <div id="grid-modal" class="closed">
+        <img src="" alt="">
+        <img src="./images/static/icons/close.png"
+            alt="close">
+        <img src="./images/static/icons/left.png"
+            alt="<">
+        <img src="./images/static/icons/right.png"
+            atlt="">
+    </div>
+
+    <span class="button" id="viewMore">VIEW MORE</span>
+
+    <footer>
+        <div>
+            <h2>Check out more of our work</h2>
+            <p>Follow us on our social media...</h3>
+            <div>
+                <a href="https://www.facebook.com/devistudiophotography/"><img src="./images/static/icons/fb.png" alt="facebook" /></a>
+                <a href="https://www.instagram.com/devistudiophotography/"><img src="./images/static/icons/insta.svg" alt="instagram" /></a>
+                <a href="https://www.youtube.com/user/TheDevistudio"><img src="./images/static/icons/yt.jpg" alt="youtube" /></a>
+            </div>
+        </div>
+        <div>
+            <h2>Looking for an event photographer...?</h2>
+            <p>We will make sure that every moment of your precious event is captured so that they can last forever.</p>
+            <h3>GET IN TOUCH NOW</h3>
+            <a class="button" href="./contact.html">CONTACT US</a>
+        </div>
+    </footer>
+
+</body>
+
+
+<link rel="stylesheet" href="./styles/grid.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt:500&display=swap">
+
+
+<style>
+
+    #about {
+        width: 100%;
+        background-image: url('./images/static/New2.jpg');
+        background-color: #aaaaaa;
+        margin: 20px 0px;
+        padding: 10px 0px;
+    }
+
+    #about .heading {
+        color: black;
+        font-size: 50px;
+    }
+
+    #about img {
+        display: block;
+        margin: 0px auto;
+        height: 120px;
+        padding: 20px;
+        color: black;
+    }
+
+    #about p {
+        max-width: 1000px;
+        margin: 0px auto;
+        padding: 40px 15px;
+        font-family: 'Rokkitt', sans-serif;
+        /* font-weight: 600; */
+        font-size: 22px;
+        text-align: justify;
+        line-height: 1.4em;
+    }
+
+
+
+
+    #snapshots-cover {
+        width: 100%;
+        height: 500px;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        background-image: url(./images/static/snapshots-cover.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    #snapshots-cover h3 {
+        font-size: 50px;
+        font-weight: 600;
+        font-family: 'Parisienne';
+        color: black;
+        text-shadow: 3px 3px white;
+        margin: 25px 0px;
+    }
+
+    @media (min-width: 800px) {
+        #snapshots-cover {
+            height: 600px;
+            justify-content: left;
+            align-items: center;
+        }
+
+        #snapshots-cover h3 {
+            font-size: 60px;
+            margin: 0px 0px 0px 300px;
+        }
+
+        #about p {
+            font-size: 26px;
+        }
+
+        #about img {
+            height: initial;
+        }
+
+        #about .heading {
+            font-size: 55px;
+        }
+    }
+</style>
+
+</html>
