@@ -24,7 +24,7 @@ import os
 # or
 # True
 
-directlyUpload = False
+directlyUpload = True
 
 
 
@@ -126,8 +126,8 @@ with open('../../manifest.js', 'w') as f:
     f.write(str(manifest).replace("True", "true"))
 
 
-with open('../../index_compiled.html', 'w') as compiled:
-    index = open('../../index.html')
+with open('../../index.html', 'w') as compiled:
+    index = open('../../index_src.html')
     text = index.read()
 
     image_tags = ''
