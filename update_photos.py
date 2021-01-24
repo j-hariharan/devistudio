@@ -24,7 +24,7 @@ import os
 # or
 # True
 
-directlyUpload = True
+directlyUpload = False
 
 
 
@@ -130,17 +130,29 @@ with open('../../index.html', 'w') as compiled:
     index = open('../../index_src.html')
     text = index.read()
 
-    image_tags = ''
-    image_links = manifest['snapshots']
+    snapshots_tags = ''
+    snapshots_links = manifest['snapshots']
 
-    for i in range(int(len(image_links)/2)):
-        image_tags += '<img src="'+image_links[i]+'" onclick="openModal('+str(i)+')">'
+    for i in range(int(len(snapshots_links)/2)):
+        snapshots_tags += '<img src="'+snapshots_links[i]+'" onclick="openModal('+str(i)+')">'
+    
+
+    cover_tags = ''
+    cover_links = manifest['cover']
+
+    for i in range(len(cover_links)):
+        if i == 0:
+            id = 'id="active"'
+        else:
+            id = ""
+        cover_tags += '<div style="background-image: url('+cover_links[i]+')" '+id+'></div>'
 
 
 
-    replaced_text = text.replace('<div id="grid"></div>', '<div id="grid">'+image_tags+'</div>')
+    text = text.replace('<div id="grid"></div>', '<div id="grid">'+snapshots_tags+'</div>')
+    text = text.replace('<cover></cover>', '<cover>'+cover_tags+'</cover>')
 
-    compiled.write(replaced_text)
+    compiled.write(text)
     
 
 
