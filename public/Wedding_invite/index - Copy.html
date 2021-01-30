@@ -172,6 +172,7 @@ a:active {
   float: left;
   width: 50%;
   padding: 10px;
+  height: 250px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -191,28 +192,27 @@ a:active {
 </head>
 <body>
 
-<div class="column1" style="background-color:#FFE4D2;" align="center">
-   <iframe width="400" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+<div class="column1" style="background-color:#ffff;" align="center">
+   <iframe width="300" height="225" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
 </iframe>
-
  </div>
   
   <div class="row">
-  <div class="column1" style="background-color:#FFE4D2;" align="center" vertical-align="centre">
-      <img src="images/banner2.png" alt="1" class="align-content-md-center"> <br>
-
-<div align="center"> <a href="https://devistudio.in/events.html?category=0&album=3"><img src="images/photo.png" alt="photo" longdesc="https://devistudio.in/events.html?category=0&album=3""></a>
- </div>
+  <div class="column" style="background-color:#ffff;" align="center">
+      <img src="images/banner2.png" alt="1" class="align-content-md-center"> 
     </div>
 </div>
   
 </div>
 
-</div>
+
 
 <!----------------> 
 
 
+<div>
+ <img src="images/photo.png" alt="photo" longdesc="https://devistudio.in/events.html?category=0&album=3"">
+ </div>
  
  <!------->
 
@@ -290,7 +290,7 @@ img {vertical-align: middle;}
 }
 
 @keyframes fade {
-  from {opacity: .10} 
+  from {opacity: .4} 
   to {opacity: 1}
 }
 
@@ -306,16 +306,19 @@ img {vertical-align: middle;}
 <div class="mySlides fade">
   <div class="numbertext1"></div>
   <img src="images/c1.png" style="width:100%">
+  <div class="text">Rahul</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext1"></div>
   <img src="images/c2.png" style="width:100%">
+  <div class="text">Vinay</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext1"></div>
   <img src="images/c3.png" style="width:100%">
+  <div class="text">Aditya</div>
 </div>
 
 </div>
@@ -366,6 +369,7 @@ function showSlides() {
 
 
 
+
  
  
      
@@ -377,8 +381,8 @@ function showSlides() {
                   <div class="col-md-12 ">
                      <div class="footer-box">
                         <div class="headinga">
-                           <h3>Devi Studio </h3>
-                            <span>Malleswarm, Bangalore</span>
+                           <h2>Devi Studio</h2>
+                           <span>Malleswarm, Bangalore</span>
                            <p>(+91 98450 30224)</p>
                         </div>
                         <ul class="location_icon">

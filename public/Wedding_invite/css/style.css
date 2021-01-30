@@ -70,8 +70,8 @@ h1 {
 }
 
 h2 {
-     font-size: 22px
-	 font-family: Arial;
+     font-size: 12px
+	 font-family: Ardila;
 	 color:#900
 }
 
@@ -489,11 +489,11 @@ ul.top_icon li a {
 
 .menu-area-main li:hover a,
 .menu-area-main li:focus a {
-     color: #308409;
+     color:#000;
 }
 
 .menu-area-main li.active a {
-     color: #308409;
+      color:#000;
 }
 
 .right_cart_section {
@@ -1596,7 +1596,7 @@ input[type="radio"] .styled:checked+label::after {
      font-size: 46px;
      line-height: 55px;
      font-weight: bold;
-     color: #308409;
+     color: #000;
 }
 .banner-main .carousel-caption p {
      color: #0c0404;
@@ -1614,13 +1614,13 @@ input[type="radio"] .styled:checked+label::after {
      margin-right: 10px;
 }
 .btn-primary:hover {
-     background: #308409;
+     background: #000;
 }
 .img-box figure {
      margin: 0;
 }
 .img-box figure img {
-     box-shadow: #308409 0px 0px 0px 0px;
+     box-shadow: #000 0px 0px 0px 0px;
 }
 .plants {
      padding: 90px 0px;
@@ -1647,7 +1647,7 @@ input[type="radio"] .styled:checked+label::after {
      margin: 10px auto;
      width: 50%;
      height: 6px;
-     background: #308409;
+     background: #000;
 }
 .titlepage span {
      color: #141012;
@@ -1836,7 +1836,7 @@ img.zoom {
      margin: 10px auto;
      width: 283px;
      height: 6px;
-     background: #308409;
+     background: #000;
 }
 .Gallery .Gallery-box:hover .hoverle {
      position: absolute;
@@ -1847,7 +1847,7 @@ img.zoom {
      text-align: center;
      display: flex;
      justify-content: center;
-     background: #308409de;
+     background: #000de;
      align-items: center;
 }
 .Gallery .Gallery-box:hover .hoverle a {
@@ -1887,14 +1887,14 @@ img.zoom {
      margin: 10px auto;
      width: 25%;
      height: 6px;
-     background: #308409;
+     background: #000;
      right: 0;
 }
 .map_section figure {
      margin: 0px;
 }
 form {
-     background: #308409;
+     background: #000;
      padding: 35px 30px;
 }
 .map_section figure img {
@@ -1963,9 +1963,10 @@ textarea {
      text-align: center;
 }
 .footer .headinga h3 {
-     font-size: 38px;
+     font-size: 24px;
+	 font-family:Ardila
      display: block;
-     color: #fff;
+     color: #FFC
      max-width: 160px;
      padding-bottom: 1px;
      border-bottom: #fff solid 1px;
@@ -1995,7 +1996,7 @@ ul.link li a {
      font-size: 17px;
 }
 ul.link li a:hover {
-     color: #308409;
+     color: #000;
 }
 .pdn-top-30 {
      padding-top: 35px;
@@ -2024,7 +2025,7 @@ ul.location_icon span {
      font-weight: 400;
 }
 .copyright {
-     background: #308409;
+     background: #000;
      padding: 20px 0px 20px 0;
 }
 .copyright p {
@@ -2093,7 +2094,7 @@ ul.location_icon span {
 #main_slider .carousel-control-next:hover,
 #main_slider .carousel-control-prev:focus,
 #main_slider .carousel-control-next:focus {
-     background: #308409;
+     background: #000;
      color: #fff;
 }
 #main_slider a.carousel-control-prev {
