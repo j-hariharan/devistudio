@@ -1,174 +1,506 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devi Studio - Home</title>
-
-    <script defer type = "module" src="./scripts/cover.js"></script>
-    <script defer type = "module" src="./scripts/snapshots.js"></script>
-    <script defer src="./scripts/grid.js"></script>
-
-    <link rel="stylesheet" href="./styles/stylesheet.css">
-    <link rel="stylesheet" href="./styles/cover.css">
-
-    <link rel="shortcut icon" href="./images/static/icons/logo.png" type="image/png">
-
-    <meta name="theme-color" content="#000000">
-
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Sushmitha Weds Shashank</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <style type="text/css">
+      body {
+	background-color: #FFE4D2;
+	text-align: center;
+}
+      a {
+	font-size: 14px;
+	color: #FFFFFF;
+}
+a:visited {
+	color: #FFFF00;
+	text-decoration: underline;
+}
+a:hover {
+	color: #FFFF00;
+	text-decoration: underline;
+}
+      a:link {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: underline;
+}
+      .H10 {
+	font-family: Ardila;
+}
+      </style>
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><span class="img-box"><img src="images/loading.gif" alt="img"/> </span></div>
+         
+      </div>
+      <!-- end loader -->
+      
+      
+      
+       
+      
+      
+      
+      
+          
+         <section >
+         <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
+           
+    <table width="100%"  border="0" table align="center" background="images/back.jpg">
+    <tr>
+   <img src="images/invite.jpg" alt="1" class="align-content-md-center">
+</tr>
 
-<body>
-    <header>
-        <img src="./images/static/logo.png" alt="Devi Studio">
-        <a tabindex="1"><img src="./images/static/icons/ham.png" alt="navigate"></a>
-        <ul>
-            <li><a href="./">HOME</a></li>
-            <li><a href="./work.html">OUR WORK</a></li>
-            <li><a href="./about.html">ABOUT US</a></li>
-            <li><a href="./contact.html">CONTACT US</a></li>
-        </ul>
-    </header>
-
-    <cover><div style="background-image: url(./images/dynamic/cover/001.jpg)" id="active"></div><div style="background-image: url(./images/dynamic/cover/002.jpg)" ></div><div style="background-image: url(./images/dynamic/cover/003.jpg)" ></div><div style="background-image: url(./images/dynamic/cover/004.jpg)" ></div></cover>
-
-    <div id="about">
-        <img src="./images/static/icons/logo.png" alt="">
-        <h1 class="heading">Devi Studio</h1>
-        <p>Hailing from Bangalore, the garden city, we at Devi Studio are passionate about photography and
-            videography that captures a multitude of emotions and memories during your events. Photography is an art
-            that is mastered with experience. With an experience of over 40 years in this field, we are masters at
-            our art and will make sure that not a single memory slips away from our lenses. </p>
-        <a href="./about.html" class="button">LEARN MORE</a>
-    </div>
-
-    <div id="snapshots-cover">
-        <h3>The Snapshots...</h3>
-    </div>
-
-    <div id="grid"><img src="./images/dynamic/snapshots/001.jpg" onclick="openModal(0)"><img src="./images/dynamic/snapshots/004.jpg" onclick="openModal(1)"><img src="./images/dynamic/snapshots/006.jpg" onclick="openModal(2)"><img src="./images/dynamic/snapshots/008.jpg" onclick="openModal(3)"><img src="./images/dynamic/snapshots/010.jpg" onclick="openModal(4)"><img src="./images/dynamic/snapshots/011.jpg" onclick="openModal(5)"><img src="./images/dynamic/snapshots/014.jpg" onclick="openModal(6)"><img src="./images/dynamic/snapshots/016.jpg" onclick="openModal(7)"><img src="./images/dynamic/snapshots/018.jpg" onclick="openModal(8)"><img src="./images/dynamic/snapshots/021.jpg" onclick="openModal(9)"><img src="./images/dynamic/snapshots/022.jpg" onclick="openModal(10)"><img src="./images/dynamic/snapshots/023.jpg" onclick="openModal(11)"><img src="./images/dynamic/snapshots/1.jpg" onclick="openModal(12)"><img src="./images/dynamic/snapshots/10.jpg" onclick="openModal(13)"></div>
-    <div id="grid-modal" class="closed">
-        <img src="" alt="">
-        <img src="./images/static/icons/close.png"
-            alt="close">
-        <img src="./images/static/icons/left.png"
-            alt="<">
-        <img src="./images/static/icons/right.png"
-            atlt="">
-    </div>
-
-    <span class="button" id="viewMore">VIEW MORE</span>
-
-    <footer>
-        <div>
-            <h2>Check out more of our work</h2>
-            <p>Follow us on our social media...</h3>
-            <div>
-                <a href="https://www.facebook.com/devistudiophotography/"><img src="./images/static/icons/fb.png" alt="facebook" /></a>
-                <a href="https://www.instagram.com/devistudiophotography/"><img src="./images/static/icons/insta.svg" alt="instagram" /></a>
-                <a href="https://www.youtube.com/user/TheDevistudio"><img src="./images/static/icons/yt.jpg" alt="youtube" /></a>
+           </table>
+           </div>
+                                      
+              </div>
             </div>
-        </div>
-        <div>
-            <h2>Looking for an event photographer...?</h2>
-            <p>We will make sure that every moment of your precious event is captured so that they can last forever.</p>
-            <h3>GET IN TOUCH NOW</h3>
-            <a class="button" href="./contact.html">CONTACT US</a>
-        </div>
-    </footer>
-
-</body>
-
-
-<link rel="stylesheet" href="./styles/grid.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rokkitt:500&display=swap">
-
-
+          </div>
+               </div>
+                                    
+      </section>
+      
+     
+      
+      
+<!------------location, program ------------>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+* {
+  box-sizing: border-box;
+}
 
-    #about {
-        width: 100%;
-        background-image: url('./images/static/New2.jpg');
-        background-color: #aaaaaa;
-        margin: 20px 0px;
-        padding: 10px 0px;
-    }
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
 
-    #about .heading {
-        color: black;
-        font-size: 50px;
-    }
+}
 
-    #about img {
-        display: block;
-        margin: 0px auto;
-        height: 120px;
-        padding: 20px;
-        color: black;
-    }
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-    #about p {
-        max-width: 1000px;
-        margin: 0px auto;
-        padding: 40px 15px;
-        font-family: 'Rokkitt', sans-serif;
-        /* font-weight: 600; */
-        font-size: 22px;
-        text-align: justify;
-        line-height: 1.4em;
-    }
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column  {
+    width: 50%;
+  }
+}
 
-
-
-
-    #snapshots-cover {
-        width: 100%;
-        height: 500px;
-
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-
-        background-image: url(./images/static/snapshots-cover.jpg);
-        background-size: cover;
-        background-position: center;
-    }
-
-
-    #snapshots-cover h3 {
-        font-size: 50px;
-        font-weight: 600;
-        font-family: 'Parisienne';
-        color: black;
-        text-shadow: 3px 3px white;
-        margin: 25px 0px;
-    }
-
-    @media (min-width: 800px) {
-        #snapshots-cover {
-            height: 600px;
-            justify-content: left;
-            align-items: center;
-        }
-
-        #snapshots-cover h3 {
-            font-size: 60px;
-            margin: 0px 0px 0px 300px;
-        }
-
-        #about p {
-            font-size: 26px;
-        }
-
-        #about img {
-            height: initial;
-        }
-
-        #about .heading {
-            font-size: 55px;
-        }
-    }
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column  {
+    width: 100%;
+  
+  }
+}
 </style>
+</head>
+<body>
 
+<div class="row" style="background-color:#FFDB88; height="125">
+
+
+
+  <div class="column"  valign="middle"  style="background-color:#FFDB88;">
+  <img src="images/location.PNG" alt="Location" longdesc="https://g.page/devistudiophotography?share">
+  </div>
+  <div class="column" valign="middle" style="background-color:#FFDB88;">
+  <img src="images/program.PNG" alt="3">
+  </div>
+ 
+  <div class="column" style="background-color:#FFDB88;">
+  <iframe src="http://free.timeanddate.com/countdown/i7ncyg4i/n438/cf100/cm0/cu4/ct0/cs0/ca0/co1/cr0/ss0/cac090/cpcf00/pct/tcfff/fs175/szw296/szh125/tatEvent%20starts%20in/tac000/tptTime%20since%20Event/tpcfff/iso2021-04-25T00:00:00" allowTransparency="true" frameborder="0" width="296" height="125"></iframe>
+  </div>
+ 
+</div>
+</meta>
+
+
+
+<!----------------> 
+
+
+<!----------youtube and photo begins------>
+
+
+      
+      
+<!------------location, program ------------>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  background-color:#760008;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column  {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column  {
+    width: 100%;
+  
+  }
+}
+  
+  
+  
+}
+</style>
+</head>
+<body>
+
+<div class="row" style="background-color:#760008; height="125">
+<div class="column2" style="background-color:#760008;" align="center">
+   <iframe width="400" height="300" src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe>
+
+ </div>
+  
+  <div class="row">
+  <div class="column2" style="background-color:#760008;" align="center" vertical-align="centre">
+      <img src="images/banner2.png" alt="1" class="align-content-md-center"> <br>
+
+<div align="center"> <a href="https://devistudio.in/events.html?category=0&album=3"><img src="images/photo.png" alt="photo" longdesc="https://devistudio.in/events.html?category=0&album=3""></a>
+ </div>
+    </div>
+    
+
+
+
+ 
+ 
+</div>
+</meta>
+
+
+
+<!----------------> 
+
+
+
+
+<!section starts---------->
+<meta name="viewport-2" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column  {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column  {
+    width: 80%;
+  
+}
+</style>
+</head>
+<body>
+
+
+</div>
+  
+</div>
+
+</div>
+
+<!----------------> 
+
+
+ 
+ <!------->
+
+
+
+
+
+
+
+
+     
+   <div>
+      <style>
+* {box-sizing: border-box;}
+body {font-family: Ardila;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: color:#900;
+  font-size: 20 px;
+  font-family: Ardila;
+  padding: 12px 12px 12px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.9s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 10s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .6} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .10} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 20px}
+}
+</style>
+</head>
+<body>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext1"></div>
+  <img src="images/c1.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext1"></div>
+  <img src="images/c2.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext1"></div>
+  <img src="images/c3.png" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+     
+   <!-- footer -->
+      <footer>
+         <div id="contact" class="footer">
+            <div class="container">
+               <div class="row pdn-top-30">
+                  <div class="col-md-12 ">
+                     <div class="footer-box">
+                        <div class="headinga">
+                           <h3>Devi Studio </h3>
+                            <span>Malleswarm, Bangalore</span>
+                           <p>(+91 98450 30224)</p>
+                        </div>
+                        <ul class="location_icon">
+                           <li> <a href="#"><img src="icon/facebook.png"></a></li>
+                           <li> <a href="#"><img src="icon/Twitter.png"></a></li>
+                           <li> <a href="#"><img src="icon/linkedin.png"></a></li>
+                           <li> <a href="#"><img src="icon/instagram.png"></a></li>
+                        </ul>
+                       
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/plugin.js"></script>
+      <!-- sidebar -->
+   <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+   <script src="js/custom.js"></script>
+      <!-- javascript --> 
+   <script src="js/owl.carousel.js"></script>
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   <script>
+         $(document).ready(function(){
+         $(".fancybox").fancybox({
+         openEffect: "none",
+         closeEffect: "none"
+         });
+         
+         $(".zoom").hover(function(){
+         
+         $(this).addClass('transition');
+         }, function(){
+         
+         $(this).removeClass('transition');
+         });
+         });
+         
+      </script> 
+   </body>
 </html>
