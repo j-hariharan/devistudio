@@ -179,13 +179,13 @@ body {
     text-align: justify;
 }
 
-iframe, #live img {
+iframe, #live img, #live video {
     width: 600px;
     height: 350px;
 }
 
 @media (max-width: 700px) {
-    iframe, #live img {
+    iframe, #live img, #live video {
         width: 90vw;
         height: calc(90vw * 320 / 550);
     }
@@ -201,7 +201,7 @@ iframe, #live img {
 
 
 @media (max-width: 450px) {
-    iframe, #live img {
+    iframe, #live img, #live video {
         width: 85vw;
         height: calc(85vw * 320 / 550);
     }
