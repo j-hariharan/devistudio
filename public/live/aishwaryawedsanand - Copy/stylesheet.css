@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Parisienne&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color:  #0a3d33;
+    margin-top: 100px;
+}
+
+#logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
+    z-index: 3;
+}
+
+#invitation {
+    background-color: #0a3d33;
+    background-image: url('./bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#invitation img {
+    width: 100%;
+    height: 100vh;
+    object-fit: contain;
+
+    opacity: 1;
+    position: relative;
+
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+
+    --fadein-bottom: 10vh;
+}
+
+#invitation video {
+    width: 600px;
+    height: 350px;
+    padding: 70px 0px;
+}
+
+
+@media (max-width: 500px) {
+    #invitation video {
+        width: 85vw;
+        height: calc(85vw * 320 / 550);
+    }
+
+    #invitation img {
+        height: auto;
+    }
+}
+
+
+@media (max-width: 700px) {
+    #invitation video {
+        width: 90vw;
+        height: calc(90vw * 320 / 550);
+    }
+}
+
+
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        bottom: var(--fadein-bottom);
+    }
+    100% {
+        opacity: 1;
+        bottom: 0vh;
+    }
+}
+
+
+
+
+#details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 25px;
+
+    color: white;
+}
+
+#details #left {
+    width: 40%;
+    text-align: center;
+}
+
+#details #left #name {
+    margin: 50px auto;
+}
+
+#details #left #name h1 {
+    margin: 0px;
+    font-size: 55px;
+    font-family: 'Parisienne';
+}
+
+#details #left #name h2 {
+    /* font-family: 'Parisienne'; */
+    font-size: 30px;
+    margin: 13px 0px;
+}
+
+#details p {
+    font-size: 23px;
+}
+
+#details #right {
+    width: 50%;
+    text-align: right;
+}
+
+#details #right img {
+    width: 100%;
+    animation-name: fadein;
+    animation-duration: 1s;
+    animation-delay: 500ms;
+    animation-fill-mode: both;
+    position: relative;
+    --fadein-bottom: 100px;
+}
+
+@media (max-width: 900px) {
+    #details {
+        flex-direction: column-reverse;
+    }
+    
+    #details #left, #details #right {
+        width: 90%;
+    }
+
+    #details #left #name h1 {
+        font-size: 43px;
+    }
+}
+
+
+
+
+
+
+
+
+#live {
+    background-color: #127460;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#live h1 {
+    font-family: 'Parisienne';
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
+
+#live p {
+    color: white;
+    font-size: 20px;
+    max-width: 800px;
+    text-align: justify;
+}
+
+iframe, #live img, #live video {
+    width: 600px;
+    height: 350px;
+}
+
+@media (max-width: 700px) {
+    iframe, #live img, #live video {
+        width: 90vw;
+        height: calc(90vw * 320 / 550);
+    }
+
+    #live h1 {
+        font-size: 50px;
+    }
+
+    #live p {
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    iframe, #live img, #live video {
+        width: 85vw;
+        height: calc(85vw * 320 / 550);
+    }
+
+    #live h1 {
+        font-size: 35px;
+    }
+    
+    #live p {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 0px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #06352c;
+    color: white;
+    text-align: center;
+}
+
+
+footer div {
+    padding: 20px;
+}
+
+footer h2 {
+    font-size: 18px;
+    padding: 10px 0px;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+footer h3 {
+    font-size: 14px;
+    padding: 20px 0px;
+}
+
+footer div div {
+    display: flex;
+    justify-content: center;
+}
+
+footer div div img {
+    height: 28px;
+    filter: invert(100%);
+    transition: 0.3s;
+    padding: 15px;
+    box-sizing: initial;
+}
+
+footer .button {
+    opacity: 0.8;
+}
+
+
+
+
+footer a:not(.button) {
+    color: white;
+    font-size: 16px;
+}
+
+
+
+
+
+@media (min-width: 375px) {
+    footer a:not(.button) {
+        font-size: 23px;
+    }    
+}
+
+
+
+@media (min-width: 950px) {
+
+
+footer {
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer>div {
+    width: 50%;
+    max-width: 450px;
+}
+
+}
+
+
+
+
+
+
+.button {
+    display: block;
+    width: 170px;
+    margin: 10px auto;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(0,106, 192);
+    text-align: center;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: default;
+}
+
+.button:hover {
+    filter: brightness(110%)
+}
+
+
+
+
+
+@media (any-hover) {
+    .button {
+        cursor: pointer;
+    }
+
+    footer div div img {
+        cursor: pointer;
+    }
+
+    header a {
+        cursor: pointer;
+    }
+
+    header ul li {
+        transition: 0.3s;
+    }
+    
+    header ul li:hover {
+        margin-bottom: 0.4em;
+    }
+}
