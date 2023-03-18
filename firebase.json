@@ -6,6 +6,12 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    
+    "redirects": [ {
+      "source": "/event_details",
+      "destination": "https://forms.gle/N24BpAumZMeVE6Hq6",
+      "type": 302
+    } ],
 
     "headers": [ {
       "source": "/live/**",
